@@ -1,0 +1,48 @@
+//
+// Sets margin between child elements.
+//
+// @param  int  $coefficient
+//
+// .entry-content {
+//   @include _margin-between-children(1);
+// }
+//
+@mixin _margin-between-children($coefficient: 1) {
+  > * + * {
+    @include _margin-top(1 * $coefficient);
+  }
+
+  > h1 {
+    @include _margin-top($_h1-margin-top * $coefficient);
+    @include _margin-bottom($_h1-margin-bottom * $coefficient);
+  }
+
+  > h2 {
+    @include _margin-top($_h2-margin-top * $coefficient);
+    @include _margin-bottom($_h2-margin-bottom * $coefficient);
+  }
+
+  > h3 {
+    @include _margin-top($_h3-margin-top * $coefficient);
+    @include _margin-bottom($_h3-margin-bottom * $coefficient);
+  }
+
+  > h4 {
+    @include _margin-top($_h4-margin-top * $coefficient);
+    @include _margin-bottom($_h4-margin-bottom * $coefficient);
+  }
+
+  > h5 {
+    @include _margin-top($_h5-margin-top * $coefficient);
+    @include _margin-bottom($_h5-margin-bottom * $coefficient);
+  }
+
+  > h6 {
+    @include _margin-top($_h6-margin-top * $coefficient);
+    @include _margin-bottom($_h6-margin-bottom * $coefficient);
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
