@@ -16,7 +16,7 @@ $ yarn add sass-basis-margin-between-children
 ### Stylus
 ```
 // The bottom margin of HTML Elements is 0.
-$_margin-bottom: 0;
+$_base-margin-bottom: 0;
 
 @import 'node_modules/sass-basis/src/css/basis';
 @import 'node_modules/sass-basis-margin-between-children/src/css/core/mixin/margin-between-children';
